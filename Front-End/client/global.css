@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+
+    --primary: 200 95% 30%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 200 20% 95%;
+    --secondary-foreground: 200 95% 30%;
+
+    --muted: 200 20% 96%;
+    --muted-foreground: 210 6% 46%;
+
+    --accent: 200 95% 94%;
+    --accent-foreground: 200 95% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 200 20% 90%;
+    --input: 200 20% 90%;
+    --ring: 200 95% 30%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 200 30% 98%;
+    --sidebar-foreground: 210 11% 15%;
+    --sidebar-primary: 200 95% 30%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 200 20% 95%;
+    --sidebar-accent-foreground: 200 95% 30%;
+    --sidebar-border: 200 20% 85%;
+    --sidebar-ring: 200 95% 30%;
+
+    /* Water system specific colors */
+    --water-blue: 200 95% 30%;
+    --water-light: 200 95% 94%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 200 95% 30%;
+  }
+
+  .dark {
+    --background: 210 30% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 30% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 30% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 200 95% 40%;
+    --primary-foreground: 210 30% 8%;
+
+    --secondary: 210 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 30% 15%;
+    --muted-foreground: 210 5% 65%;
+
+    --accent: 210 30% 15%;
+    --accent-foreground: 200 95% 40%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 30% 15%;
+    --input: 210 30% 15%;
+    --ring: 200 95% 40%;
+
+    --sidebar-background: 210 30% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 200 95% 40%;
+    --sidebar-primary-foreground: 210 30% 8%;
+    --sidebar-accent: 210 30% 15%;
+    --sidebar-accent-foreground: 200 95% 40%;
+    --sidebar-border: 210 30% 20%;
+    --sidebar-ring: 200 95% 40%;
+
+    /* Water system specific colors for dark mode */
+    --water-blue: 200 95% 40%;
+    --water-light: 210 30% 15%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 200 95% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: 'Pretendard', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Pretendard', sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+}
